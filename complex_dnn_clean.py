@@ -54,6 +54,37 @@ y_labels = np.ravel_multi_index(dataIn, (M,) * Nt)
 
 # -----------------DNN--------------------
 
+# -------------------Adam 10k------------------------
+# TRAINING: Epoch: 3000, lr: 0.001, Loss: 0.151, Acc: 0.960
+# Test: loss= 0.15141487129480616, acc= 0.9603
+# 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
+
+# ---------------------RMSProp 10k----------------
+# training: Epoch: 3000, lr: 0.001, Loss: 0.080, Acc: 0.971
+# Testing: loss= 0.07954659944807772, acc= 0.9715
+# 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
+
+# -------------------RMSProp 10k------------------------
+# Training: Epoch: 100, lr: 0.001, Loss: 0.091, Acc: 0.972
+# Testing: loss= 0.09013940935138333, acc= 0.972
+# 128 neurons, two layers, 10k symbols, BSPK, SER~10^-2
+
+# ------------------RMSProp 100k------------------------
+# TRAINING: Epoch: 100, lr: 0.001, Loss: 0.114, Acc: 0.962
+# Testing:
+# 16 neurons, two layers, 100k symbols, BPSK, SER~ 10^-2
+
+# ---------------------Adagrad 10k----------------------
+# TRAINING: Epoch: 3000, lr: 0.001, Loss: 0.083, Acc: 0.969
+# Testing: loss= 0.08301183551639033, acc= 0.9685
+# 16 neurons, two layers, 10k symbols, BPSK, SER~ 10^-2
+
+# ----------------------SGD 10k---------------------------
+# Training: Epoch: 3000, lr: 0.001, Loss: 0.086, Acc: 0.969
+# Testing:  loss= 0.08564142986641522, acc= 0.9687
+# 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
+
+
 layer1 = Layer_Dense(12, 16)
 act1 = Activation_Softmax()
 layer2 = Layer_Dense(16, num_combinations)
@@ -64,7 +95,7 @@ optimizer3 = RMSProp_Optimizer(learning_rate=0.05, decay=1e-2, rho=0.7)
 optimizer4 = SGD_Optimizer(learning_rate=1, decay=1e-6, momentum=0.9)
 
 # Each Epoch is a single forwrad & backward pass
-for epoch in range(3001):
+for epoch in range(101):
     snr_db = np.random.uniform(0, 20)
     snr = 10 ** (snr_db / 10)
     sigma = np.sqrt(1 / (2 * snr))
@@ -92,12 +123,12 @@ for epoch in range(3001):
     layer1.backward(act1.dinputs)
 
     # Now finally updating the weights and biases
-    optimizer1.pre_update_params()
-    optimizer1.update_params(layer1)
-    optimizer1.update_params(layer2)
-    optimizer1.post_update_params()
+    optimizer3.pre_update_params()
+    optimizer3.update_params(layer1)
+    optimizer3.update_params(layer2)
+    optimizer3.post_update_params()
 
-    if not epoch % 50:
+    if not epoch % 10:
         print(
             f"Epoch: {epoch}, lr: {optimizer1.current_learning_rate}, Loss: {
                 loss:.3f}, Acc: {accuracy:.3f}"
@@ -129,7 +160,21 @@ x = dataMod
 y = np.einsum("rnk,nk->rk", H, x)
 
 power_rx = np.mean(np.abs(x) ** 2)
-ser_NN = np.zeros(len(SNR))
+ser_adam = np.zeros(len(SNR))
+
+print_loss = 0
+print_accuracy = 0
+
+layer1.forward(X)
+act1.forward(layer1.output)
+layer2.forward(act1.output)
+
+loss = loss_func.forward(layer2.output, y_labels)
+preds = np.argmax(layer2.output, axis=1)
+accruacy = np.mean(preds == y_labels)
+
+print("\n--------------RMSProp Testing-------------------\n")
+print(f"loss= {loss}, acc= {accuracy}")
 
 for i in range(len(SNR)):
     power_n = SNR[i] - 10 * np.log10(power_rx)
@@ -165,18 +210,17 @@ for i in range(len(SNR)):
     pred_joint = np.argmax(layer2.output, axis=1)
     pred_symbols = np.array(np.unravel_index(pred_joint, (M,) * Nt))
 
-    ser_NN[i] = np.sum(pred_symbols != dataIn) / (Nt * K)
+    ser_adam[i] = np.sum(pred_symbols != dataIn) / (Nt * K)
 
 
 plt.figure()
 
-plt.semilogy(SNR, ser_NN, "s-", label="NN")
-
+plt.semilogy(SNR, ser_adam, "o--", label="RMSProp")
 plt.grid(True)
 
 plt.xlabel("SNR [dB]")
 plt.ylabel("SER")
-plt.title("2x2 MIMO SER Comparison")
+plt.title("2x2 MIMO SER, 10k Symbols, BPSK, 16 Neurons, 2 Layers")
 plt.legend()
 
 plt.show()

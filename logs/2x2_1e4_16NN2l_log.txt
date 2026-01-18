@@ -1,0 +1,272 @@
+
+------------------------------Adam training loop-------------------
+
+Epoch: 0, lr: 0.001, Loss: 1.388, Acc: 0.217
+Epoch: 50, lr: 0.001, Loss: 1.379, Acc: 0.367
+Epoch: 100, lr: 0.001, Loss: 1.368, Acc: 0.519
+Epoch: 150, lr: 0.001, Loss: 1.354, Acc: 0.556
+Epoch: 200, lr: 0.001, Loss: 1.334, Acc: 0.608
+Epoch: 250, lr: 0.001, Loss: 1.309, Acc: 0.672
+Epoch: 300, lr: 0.001, Loss: 1.278, Acc: 0.714
+Epoch: 350, lr: 0.001, Loss: 1.242, Acc: 0.743
+Epoch: 400, lr: 0.001, Loss: 1.201, Acc: 0.790
+Epoch: 450, lr: 0.001, Loss: 1.154, Acc: 0.834
+Epoch: 500, lr: 0.001, Loss: 1.103, Acc: 0.866
+Epoch: 550, lr: 0.001, Loss: 1.048, Acc: 0.888
+Epoch: 600, lr: 0.001, Loss: 0.992, Acc: 0.901
+Epoch: 650, lr: 0.001, Loss: 0.935, Acc: 0.911
+Epoch: 700, lr: 0.001, Loss: 0.879, Acc: 0.920
+Epoch: 750, lr: 0.001, Loss: 0.823, Acc: 0.926
+Epoch: 800, lr: 0.001, Loss: 0.770, Acc: 0.930
+Epoch: 850, lr: 0.001, Loss: 0.719, Acc: 0.934
+Epoch: 900, lr: 0.001, Loss: 0.671, Acc: 0.939
+Epoch: 950, lr: 0.001, Loss: 0.627, Acc: 0.941
+Epoch: 1000, lr: 0.001, Loss: 0.586, Acc: 0.944
+Epoch: 1050, lr: 0.001, Loss: 0.548, Acc: 0.946
+Epoch: 1100, lr: 0.001, Loss: 0.514, Acc: 0.947
+Epoch: 1150, lr: 0.001, Loss: 0.482, Acc: 0.949
+Epoch: 1200, lr: 0.001, Loss: 0.454, Acc: 0.951
+Epoch: 1250, lr: 0.001, Loss: 0.428, Acc: 0.952
+Epoch: 1300, lr: 0.001, Loss: 0.404, Acc: 0.953
+Epoch: 1350, lr: 0.001, Loss: 0.383, Acc: 0.954
+Epoch: 1400, lr: 0.001, Loss: 0.364, Acc: 0.954
+Epoch: 1450, lr: 0.001, Loss: 0.347, Acc: 0.954
+Epoch: 1500, lr: 0.001, Loss: 0.331, Acc: 0.955
+Epoch: 1550, lr: 0.001, Loss: 0.317, Acc: 0.955
+Epoch: 1600, lr: 0.001, Loss: 0.304, Acc: 0.955
+Epoch: 1650, lr: 0.001, Loss: 0.292, Acc: 0.955
+Epoch: 1700, lr: 0.001, Loss: 0.281, Acc: 0.955
+Epoch: 1750, lr: 0.001, Loss: 0.271, Acc: 0.956
+Epoch: 1800, lr: 0.001, Loss: 0.261, Acc: 0.956
+Epoch: 1850, lr: 0.001, Loss: 0.253, Acc: 0.957
+Epoch: 1900, lr: 0.001, Loss: 0.245, Acc: 0.957
+Epoch: 1950, lr: 0.001, Loss: 0.237, Acc: 0.958
+Epoch: 2000, lr: 0.001, Loss: 0.230, Acc: 0.958
+Epoch: 2050, lr: 0.001, Loss: 0.224, Acc: 0.958
+Epoch: 2100, lr: 0.001, Loss: 0.218, Acc: 0.958
+Epoch: 2150, lr: 0.001, Loss: 0.212, Acc: 0.959
+Epoch: 2200, lr: 0.001, Loss: 0.206, Acc: 0.959
+Epoch: 2250, lr: 0.001, Loss: 0.201, Acc: 0.959
+Epoch: 2300, lr: 0.001, Loss: 0.197, Acc: 0.959
+Epoch: 2350, lr: 0.001, Loss: 0.192, Acc: 0.959
+Epoch: 2400, lr: 0.001, Loss: 0.188, Acc: 0.959
+Epoch: 2450, lr: 0.001, Loss: 0.184, Acc: 0.960
+Epoch: 2500, lr: 0.001, Loss: 0.180, Acc: 0.960
+Epoch: 2550, lr: 0.001, Loss: 0.176, Acc: 0.960
+Epoch: 2600, lr: 0.001, Loss: 0.173, Acc: 0.960
+Epoch: 2650, lr: 0.001, Loss: 0.170, Acc: 0.960
+Epoch: 2700, lr: 0.001, Loss: 0.167, Acc: 0.960
+Epoch: 2750, lr: 0.001, Loss: 0.164, Acc: 0.960
+Epoch: 2800, lr: 0.001, Loss: 0.161, Acc: 0.960
+Epoch: 2850, lr: 0.001, Loss: 0.158, Acc: 0.960
+Epoch: 2900, lr: 0.001, Loss: 0.156, Acc: 0.960
+Epoch: 2950, lr: 0.001, Loss: 0.154, Acc: 0.960
+Epoch: 3000, lr: 0.001, Loss: 0.151, Acc: 0.960
+
+-----------------------Adam testing result-----------------------
+
+loss= 0.15141487129480616, acc= 0.9603
+
+---------------RMSProp training loop-----------------
+
+Epoch: 0, lr: 0.001, Loss: 0.161, Acc: 0.955
+Epoch: 50, lr: 0.001, Loss: 0.103, Acc: 0.965
+Epoch: 100, lr: 0.001, Loss: 0.094, Acc: 0.967
+Epoch: 150, lr: 0.001, Loss: 0.089, Acc: 0.968
+Epoch: 200, lr: 0.001, Loss: 0.087, Acc: 0.970
+Epoch: 250, lr: 0.001, Loss: 0.086, Acc: 0.970
+Epoch: 300, lr: 0.001, Loss: 0.085, Acc: 0.970
+Epoch: 350, lr: 0.001, Loss: 0.085, Acc: 0.971
+Epoch: 400, lr: 0.001, Loss: 0.084, Acc: 0.971
+Epoch: 450, lr: 0.001, Loss: 0.084, Acc: 0.970
+Epoch: 500, lr: 0.001, Loss: 0.084, Acc: 0.970
+Epoch: 550, lr: 0.001, Loss: 0.083, Acc: 0.971
+Epoch: 600, lr: 0.001, Loss: 0.083, Acc: 0.971
+Epoch: 650, lr: 0.001, Loss: 0.083, Acc: 0.971
+Epoch: 700, lr: 0.001, Loss: 0.083, Acc: 0.971
+Epoch: 750, lr: 0.001, Loss: 0.083, Acc: 0.971
+Epoch: 800, lr: 0.001, Loss: 0.083, Acc: 0.971
+Epoch: 850, lr: 0.001, Loss: 0.082, Acc: 0.971
+Epoch: 900, lr: 0.001, Loss: 0.082, Acc: 0.971
+Epoch: 950, lr: 0.001, Loss: 0.082, Acc: 0.971
+Epoch: 1000, lr: 0.001, Loss: 0.082, Acc: 0.971
+Epoch: 1050, lr: 0.001, Loss: 0.082, Acc: 0.971
+Epoch: 1100, lr: 0.001, Loss: 0.082, Acc: 0.971
+Epoch: 1150, lr: 0.001, Loss: 0.082, Acc: 0.972
+Epoch: 1200, lr: 0.001, Loss: 0.082, Acc: 0.972
+Epoch: 1250, lr: 0.001, Loss: 0.082, Acc: 0.972
+Epoch: 1300, lr: 0.001, Loss: 0.082, Acc: 0.972
+Epoch: 1350, lr: 0.001, Loss: 0.082, Acc: 0.972
+Epoch: 1400, lr: 0.001, Loss: 0.082, Acc: 0.972
+Epoch: 1450, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1500, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1550, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1600, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1650, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1700, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1750, lr: 0.001, Loss: 0.081, Acc: 0.971
+Epoch: 1800, lr: 0.001, Loss: 0.081, Acc: 0.971
+Epoch: 1850, lr: 0.001, Loss: 0.081, Acc: 0.972
+Epoch: 1900, lr: 0.001, Loss: 0.081, Acc: 0.971
+Epoch: 1950, lr: 0.001, Loss: 0.081, Acc: 0.971
+Epoch: 2000, lr: 0.001, Loss: 0.081, Acc: 0.971
+Epoch: 2050, lr: 0.001, Loss: 0.080, Acc: 0.972
+Epoch: 2100, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2150, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2200, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2250, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2300, lr: 0.001, Loss: 0.080, Acc: 0.972
+Epoch: 2350, lr: 0.001, Loss: 0.080, Acc: 0.972
+Epoch: 2400, lr: 0.001, Loss: 0.080, Acc: 0.972
+Epoch: 2450, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2500, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2550, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2600, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2650, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2700, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2750, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2800, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2850, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2900, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 2950, lr: 0.001, Loss: 0.080, Acc: 0.971
+Epoch: 3000, lr: 0.001, Loss: 0.080, Acc: 0.971
+
+-----------------------RMSProp testing result-----------------------
+
+loss= 0.07954659944807772, acc= 0.9715
+
+---------------Adagrad training loop-----------------
+
+Epoch: 0, lr: 0.001, Loss: 0.150, Acc: 0.956
+Epoch: 50, lr: 0.001, Loss: 0.127, Acc: 0.960
+Epoch: 100, lr: 0.001, Loss: 0.115, Acc: 0.961
+Epoch: 150, lr: 0.001, Loss: 0.107, Acc: 0.963
+Epoch: 200, lr: 0.001, Loss: 0.102, Acc: 0.964
+Epoch: 250, lr: 0.001, Loss: 0.100, Acc: 0.964
+Epoch: 300, lr: 0.001, Loss: 0.098, Acc: 0.965
+Epoch: 350, lr: 0.001, Loss: 0.097, Acc: 0.965
+Epoch: 400, lr: 0.001, Loss: 0.096, Acc: 0.965
+Epoch: 450, lr: 0.001, Loss: 0.095, Acc: 0.965
+Epoch: 500, lr: 0.001, Loss: 0.094, Acc: 0.966
+Epoch: 550, lr: 0.001, Loss: 0.093, Acc: 0.966
+Epoch: 600, lr: 0.001, Loss: 0.093, Acc: 0.965
+Epoch: 650, lr: 0.001, Loss: 0.092, Acc: 0.966
+Epoch: 700, lr: 0.001, Loss: 0.092, Acc: 0.966
+Epoch: 750, lr: 0.001, Loss: 0.091, Acc: 0.966
+Epoch: 800, lr: 0.001, Loss: 0.090, Acc: 0.966
+Epoch: 850, lr: 0.001, Loss: 0.090, Acc: 0.966
+Epoch: 900, lr: 0.001, Loss: 0.090, Acc: 0.966
+Epoch: 950, lr: 0.001, Loss: 0.089, Acc: 0.966
+Epoch: 1000, lr: 0.001, Loss: 0.089, Acc: 0.966
+Epoch: 1050, lr: 0.001, Loss: 0.088, Acc: 0.966
+Epoch: 1100, lr: 0.001, Loss: 0.088, Acc: 0.966
+Epoch: 1150, lr: 0.001, Loss: 0.088, Acc: 0.967
+Epoch: 1200, lr: 0.001, Loss: 0.088, Acc: 0.967
+Epoch: 1250, lr: 0.001, Loss: 0.087, Acc: 0.967
+Epoch: 1300, lr: 0.001, Loss: 0.087, Acc: 0.967
+Epoch: 1350, lr: 0.001, Loss: 0.087, Acc: 0.967
+Epoch: 1400, lr: 0.001, Loss: 0.087, Acc: 0.967
+Epoch: 1450, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 1500, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 1550, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 1600, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 1650, lr: 0.001, Loss: 0.086, Acc: 0.969
+Epoch: 1700, lr: 0.001, Loss: 0.086, Acc: 0.969
+Epoch: 1750, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 1800, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 1850, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 1900, lr: 0.001, Loss: 0.085, Acc: 0.968
+Epoch: 1950, lr: 0.001, Loss: 0.085, Acc: 0.968
+Epoch: 2000, lr: 0.001, Loss: 0.085, Acc: 0.968
+Epoch: 2050, lr: 0.001, Loss: 0.085, Acc: 0.968
+Epoch: 2100, lr: 0.001, Loss: 0.085, Acc: 0.968
+Epoch: 2150, lr: 0.001, Loss: 0.085, Acc: 0.969
+Epoch: 2200, lr: 0.001, Loss: 0.085, Acc: 0.969
+Epoch: 2250, lr: 0.001, Loss: 0.085, Acc: 0.969
+Epoch: 2300, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2350, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2400, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2450, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2500, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2550, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2600, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2650, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2700, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2750, lr: 0.001, Loss: 0.084, Acc: 0.969
+Epoch: 2800, lr: 0.001, Loss: 0.083, Acc: 0.969
+Epoch: 2850, lr: 0.001, Loss: 0.083, Acc: 0.969
+Epoch: 2900, lr: 0.001, Loss: 0.083, Acc: 0.969
+Epoch: 2950, lr: 0.001, Loss: 0.083, Acc: 0.969
+Epoch: 3000, lr: 0.001, Loss: 0.083, Acc: 0.969
+
+-----------------------Adagrad testing result-----------------------
+
+loss= 0.08301183551639033, acc= 0.9685
+
+---------------SGD training loop-----------------
+
+Epoch: 0, lr: 0.001, Loss: 0.141, Acc: 0.955
+Epoch: 50, lr: 0.001, Loss: 0.128, Acc: 0.958
+Epoch: 100, lr: 0.001, Loss: 0.120, Acc: 0.960
+Epoch: 150, lr: 0.001, Loss: 0.114, Acc: 0.961
+Epoch: 200, lr: 0.001, Loss: 0.110, Acc: 0.963
+Epoch: 250, lr: 0.001, Loss: 0.107, Acc: 0.964
+Epoch: 300, lr: 0.001, Loss: 0.104, Acc: 0.964
+Epoch: 350, lr: 0.001, Loss: 0.102, Acc: 0.964
+Epoch: 400, lr: 0.001, Loss: 0.101, Acc: 0.964
+Epoch: 450, lr: 0.001, Loss: 0.099, Acc: 0.964
+Epoch: 500, lr: 0.001, Loss: 0.098, Acc: 0.965
+Epoch: 550, lr: 0.001, Loss: 0.098, Acc: 0.965
+Epoch: 600, lr: 0.001, Loss: 0.097, Acc: 0.965
+Epoch: 650, lr: 0.001, Loss: 0.097, Acc: 0.965
+Epoch: 700, lr: 0.001, Loss: 0.096, Acc: 0.965
+Epoch: 750, lr: 0.001, Loss: 0.095, Acc: 0.965
+Epoch: 800, lr: 0.001, Loss: 0.095, Acc: 0.965
+Epoch: 850, lr: 0.001, Loss: 0.094, Acc: 0.965
+Epoch: 900, lr: 0.001, Loss: 0.094, Acc: 0.965
+Epoch: 950, lr: 0.001, Loss: 0.093, Acc: 0.965
+Epoch: 1000, lr: 0.001, Loss: 0.093, Acc: 0.966
+Epoch: 1050, lr: 0.001, Loss: 0.092, Acc: 0.965
+Epoch: 1100, lr: 0.001, Loss: 0.092, Acc: 0.966
+Epoch: 1150, lr: 0.001, Loss: 0.091, Acc: 0.966
+Epoch: 1200, lr: 0.001, Loss: 0.091, Acc: 0.966
+Epoch: 1250, lr: 0.001, Loss: 0.091, Acc: 0.966
+Epoch: 1300, lr: 0.001, Loss: 0.091, Acc: 0.966
+Epoch: 1350, lr: 0.001, Loss: 0.090, Acc: 0.966
+Epoch: 1400, lr: 0.001, Loss: 0.090, Acc: 0.967
+Epoch: 1450, lr: 0.001, Loss: 0.090, Acc: 0.967
+Epoch: 1500, lr: 0.001, Loss: 0.090, Acc: 0.967
+Epoch: 1550, lr: 0.001, Loss: 0.090, Acc: 0.967
+Epoch: 1600, lr: 0.001, Loss: 0.089, Acc: 0.967
+Epoch: 1650, lr: 0.001, Loss: 0.089, Acc: 0.967
+Epoch: 1700, lr: 0.001, Loss: 0.089, Acc: 0.967
+Epoch: 1750, lr: 0.001, Loss: 0.089, Acc: 0.967
+Epoch: 1800, lr: 0.001, Loss: 0.089, Acc: 0.967
+Epoch: 1850, lr: 0.001, Loss: 0.089, Acc: 0.967
+Epoch: 1900, lr: 0.001, Loss: 0.089, Acc: 0.968
+Epoch: 1950, lr: 0.001, Loss: 0.088, Acc: 0.968
+Epoch: 2000, lr: 0.001, Loss: 0.088, Acc: 0.968
+Epoch: 2050, lr: 0.001, Loss: 0.088, Acc: 0.968
+Epoch: 2100, lr: 0.001, Loss: 0.088, Acc: 0.968
+Epoch: 2150, lr: 0.001, Loss: 0.088, Acc: 0.968
+Epoch: 2200, lr: 0.001, Loss: 0.088, Acc: 0.968
+Epoch: 2250, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2300, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2350, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2400, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2450, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2500, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2550, lr: 0.001, Loss: 0.087, Acc: 0.968
+Epoch: 2600, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 2650, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 2700, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 2750, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 2800, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 2850, lr: 0.001, Loss: 0.086, Acc: 0.968
+Epoch: 2900, lr: 0.001, Loss: 0.086, Acc: 0.969
+Epoch: 2950, lr: 0.001, Loss: 0.086, Acc: 0.969
+Epoch: 3000, lr: 0.001, Loss: 0.086, Acc: 0.969
+
+-----------------------SGD testing result-----------------------
+
+loss= 0.08564142986641522, acc= 0.9687

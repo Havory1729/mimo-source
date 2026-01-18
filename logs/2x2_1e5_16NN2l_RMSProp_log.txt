@@ -1,0 +1,11 @@
+Epoch: 0, lr: 0.001, Loss: 1.386, Acc: 0.224
+Epoch: 10, lr: 0.001, Loss: 1.036, Acc: 0.901
+Epoch: 20, lr: 0.001, Loss: 0.651, Acc: 0.938
+Epoch: 30, lr: 0.001, Loss: 0.416, Acc: 0.949
+Epoch: 40, lr: 0.001, Loss: 0.282, Acc: 0.954
+Epoch: 50, lr: 0.001, Loss: 0.207, Acc: 0.956
+Epoch: 60, lr: 0.001, Loss: 0.164, Acc: 0.957
+Epoch: 70, lr: 0.001, Loss: 0.140, Acc: 0.959
+Epoch: 80, lr: 0.001, Loss: 0.127, Acc: 0.960
+Epoch: 90, lr: 0.001, Loss: 0.119, Acc: 0.961
+Epoch: 100, lr: 0.001, Loss: 0.114, Acc: 0.962

@@ -1,0 +1,15 @@
+Epoch: 0, lr: 0.001, Loss: 1.386, Acc: 0.253
+Epoch: 10, lr: 0.001, Loss: 1.006, Acc: 0.867
+Epoch: 20, lr: 0.001, Loss: 0.614, Acc: 0.934
+Epoch: 30, lr: 0.001, Loss: 0.385, Acc: 0.950
+Epoch: 40, lr: 0.001, Loss: 0.259, Acc: 0.955
+Epoch: 50, lr: 0.001, Loss: 0.189, Acc: 0.959
+Epoch: 60, lr: 0.001, Loss: 0.151, Acc: 0.962
+Epoch: 70, lr: 0.001, Loss: 0.128, Acc: 0.964
+Epoch: 80, lr: 0.001, Loss: 0.113, Acc: 0.965
+Epoch: 90, lr: 0.001, Loss: 0.102, Acc: 0.969
+Epoch: 100, lr: 0.001, Loss: 0.094, Acc: 0.970
+
+--------------RMSProp Testing-------------------
+
+loss= 0.09341751063103743, acc= 0.9695
