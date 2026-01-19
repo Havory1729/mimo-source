@@ -1,0 +1,31 @@
+# -------------------Adam 10k------------------------
+# TRAINING: Epoch: 3000, lr: 0.001, Loss: 0.151, Acc: 0.960
+# Test: loss= 0.15141487129480616, acc= 0.9603
+# 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
+
+# ---------------------RMSProp 10k----------------
+# training: Epoch: 3000, lr: 0.001, Loss: 0.080, Acc: 0.971
+# Testing: loss= 0.07954659944807772, acc= 0.9715
+# 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
+
+# -------------------RMSProp 10k------------------------
+# Training: Epoch: 100, lr: 0.001, Loss: 0.091, Acc: 0.972
+# Testing: loss= 0.09013940935138333, acc= 0.972
+# 128 neurons, two layers, 10k symbols, BSPK, SER~10^-2
+
+# ------------------RMSProp 100k------------------------
+# TRAINING: Epoch: 100, lr: 0.001, Loss: 0.114, Acc: 0.962
+# Testing:
+# 16 neurons, two layers, 100k symbols, BPSK, SER~ 10^-2
+
+# ---------------------Adagrad 10k----------------------
+# TRAINING: Epoch: 3000, lr: 0.001, Loss: 0.083, Acc: 0.969
+# Testing: loss= 0.08301183551639033, acc= 0.9685
+# 16 neurons, two layers, 10k symbols, BPSK, SER~ 10^-2
+
+# ----------------------SGD 10k---------------------------
+# Training: Epoch: 3000, lr: 0.001, Loss: 0.086, Acc: 0.969
+# Testing:  loss= 0.08564142986641522, acc= 0.9687
+# 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
+
+

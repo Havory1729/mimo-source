@@ -11,6 +11,15 @@ from model.optimizers.RMSProp import RMSProp_Optimizer
 # Previous problems, single channel detection
 # no SNR awareness to beat MMSE
 
+
+"""
+current problems
+1. need better SNR range
+2. use gram method to beat MMSE
+3. need better physics implementation for non linearity to simulate MMSE equation 
+
+"""
+
 Nr = 2
 Nt = 2
 M = 2

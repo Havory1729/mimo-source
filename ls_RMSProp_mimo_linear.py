@@ -11,10 +11,38 @@ from model.optimizers.RMSProp import *
 # Previous problems, single channel detection
 # no SNR awareness to beat MMSE
 
-Nr = 32  # Num of receiver's antennas (base station)
+
+"""
+current problems with RMSProp on large mimo
+1. exploding weights, biases, softmax activations 
+    O(K, M^K) as opposed to classic mimo, O(Nt^3, K)
+
+2. exploding one hot labeling even if sparse
+3. RMSProp copies the current weights for cache, increasing size even more
+
+
+sols:
+1. need per stream classification (per sample)
+    eg (output size = Nt × M = 4 × 32 = 128) predict each layer seprately
+
+2. need a regression style detector
+    output = complex ^ Nt (real + imag) 
+    loss = MSE
+
+3. iterative method / unfolded detection where:
+    Each layer mimics one MMSE / gradient step
+    No exponential output
+    Matches classical detectors structurall
+
+
+My current options are to lower the dimensions of the problem
+"""
+
+
+Nr = 16  # Num of receiver's antennas (base station)
 Nt = 4  # Num of transmitters (user equipments)
-M = 32  # Use M-qam modulation
-K = int(1e3)  # Num of symbols transmitted per user
+M = 8  # Use M-qam modulation
+K = int(1e4)  # Num of symbols transmitted per user
 SNR = np.arange(0, 22, 2)
 num_combinations = M**Nt
 
@@ -24,11 +52,9 @@ H, X, X_train_mean, X_train_std, x, y, y_labels, datain = create_mimo_data(
     Nr, Nt, M, K, SNR, num_combinations
 )
 
-# -----------------DNN--------------------
 
-layer1 = Layer_Dense(265, 16)
+layer1 = Layer_Dense(137, 16)
 act1 = Activation_ReLU()
-
 layer2 = Layer_Dense(16, num_combinations)
 loss_func = Activation_Softmax_Loss_CCEntropy()
 optimizer3 = RMSProp_Optimizer(learning_rate=0.005, decay=1e-4, rho=0.9)
@@ -344,11 +370,11 @@ for idx, snr in enumerate(SNR):
 plt.figure(figsize=(10, 8))
 plt.semilogy(SNR, ser_NS, "o-", label="Neumann Series")
 plt.semilogy(SNR, ser_NI, "x-", label="Newton Iteration")
-plt.semilogy(SNR, ser_GS, "^-", label="Gauss Seidel")
+# plt.semilogy(SNR, ser_GS, "^-", label="Gauss Seidel")
 
 plt.semilogy(SNR, ser_Ja, "d-", label="Jacobi method")
 # plt.semilogy(SNR, ser_CG, "s-", label="Conjugate Gradient")
-# plt.semilogy(SNR, ser_adam, "*--", label="RMSProp")
+plt.semilogy(SNR, ser_adam, "*--", label="RMSProp")
 
 plt.grid(True, which="both")
 plt.xlabel("SNR [dB]")
