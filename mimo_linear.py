@@ -4,10 +4,10 @@ import numpy as np
 # print(matplotlib.get_backend())
 # matplotlib.use("webagg")
 
-Nr = 64  # Recieving antennas
-Nt = 8  # Transmitting antennas
+Nr = 16  # Recieving antennas
+Nt = 2  # Transmitting antennas
 M = 2  # M-PSK modulation
-K = int(1e5)  # number of symbols transmitted per reciever
+K = int(1e3)  # number of symbols transmitted per reciever
 SNR = np.arange(0, 22, 2)
 bit_number = Nt * K * np.log2(M)
 
@@ -128,7 +128,7 @@ plt.semilogy(SNR, ser_ML, "--.", label="ML")
 plt.grid(True)
 plt.xlabel("SNR [dB]")
 plt.ylabel("SER")
-plt.title("Small Mimo Detection, Nr(64)*Nt(8), BPSK, 100k symbols")
+plt.title(f"Small Mimo Detection, Nr({Nr}) * Nt({Nt}), {M}-PSK, {K} symbols")
 plt.legend()
 
 plt.show()

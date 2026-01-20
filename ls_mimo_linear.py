@@ -2,10 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Parameters
-Nr = 64  # Num of receiver's antennas (base station)
-
-Nt = 8  # Num of transmitters (user equipments)
-
+Nr = 128  # Num of receiver's antennas (base station)
+Nt = 16  # Num of transmitters (user equipments)
 M = 64  # Use M-qam modulation
 K = int(1e5)  # Num of symbols transmitted per user
 SNR = np.arange(5, 16)  # 5:15 inclusive
