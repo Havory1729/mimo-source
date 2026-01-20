@@ -7,7 +7,6 @@ from model.optimizers.Adam import Adam_Optimizer
 from model.optimizers.RMSProp import RMSProp_Optimizer
 from model.optimizers.SGD import SGD_Optimizer
 
-
 # -------------------Adam 10k------------------------
 # TRAINING: Epoch: 3000, lr: 0.001, Loss: 0.151, Acc: 0.960
 # Test: loss= 0.15141487129480616, acc= 0.9603
@@ -39,8 +38,8 @@ from model.optimizers.SGD import SGD_Optimizer
 # 16 neurons, two layers, 10k symbols, BPSK, SER~10^-2
 
 
-Nr = 2
-Nt = 2
+Nr = 16
+Nt = 4
 M = 2
 K = int(1e4)
 SNR = np.arange(0, 22, 2)
@@ -87,7 +86,7 @@ y_labels = np.ravel_multi_index(dataIn, (M,) * Nt)
 # 16 neurons, two layer2, 10k symbols, BPSK, SER = 10^-2
 
 
-layer1 = Layer_Dense(12, 16)
+layer1 = Layer_Dense(136, 16)
 act1 = Activation_ReLU()
 layer2 = Layer_Dense(16, num_combinations)
 loss_func = Activation_Softmax_Loss_CCEntropy()
@@ -98,7 +97,7 @@ optimizer4 = SGD_Optimizer(learning_rate=1, decay=1e-6, momentum=0.9)
 
 # --------------------------------Adam training loop--------------------------#
 
-print("\n------------------------------Adam training loop-------------------\n")
+print("\n-----------------Adam training loop--------------\n")
 print_loss = 0
 print_acc = 0
 
@@ -176,7 +175,7 @@ loss = loss_func.forward(layer2.output, y_labels)
 preds = np.argmax(layer2.output, axis=1)
 accuracy = np.mean(preds == y_labels)
 
-print("\n-----------------------Adam testing result-----------------------\n")
+print("\n-----------------Adam testing result----------------\n")
 print(f"loss= {loss}, acc= {accuracy}")
 
 
@@ -326,7 +325,7 @@ loss = loss_func.forward(layer2.output, y_labels)
 preds = np.argmax(layer2.output, axis=1)
 accuracy = np.mean(preds == y_labels)
 
-print("\n-----------------------RMSProp testing result-----------------------\n")
+print("\n---------------RMSProp testing result---------------\n")
 print(f"loss= {loss}, acc= {accuracy}")
 
 
@@ -473,7 +472,7 @@ loss = loss_func.forward(layer2.output, y_labels)
 preds = np.argmax(layer2.output, axis=1)
 accuracy = np.mean(preds == y_labels)
 
-print("\n-----------------------Adagrad testing result-----------------------\n")
+print("\n---------------Adagrad testing result------------\n")
 print(f"loss= {loss}, acc= {accuracy}")
 
 for i in range(len(SNR)):
@@ -622,7 +621,7 @@ loss = loss_func.forward(layer2.output, y_labels)
 preds = np.argmax(layer2.output, axis=1)
 accuracy = np.mean(preds == y_labels)
 
-print("\n-----------------------SGD testing result-----------------------\n")
+print("\n-------------------SGD testing result---------------\n")
 print(f"loss= {loss}, acc= {accuracy}")
 
 for i in range(len(SNR)):
@@ -672,7 +671,7 @@ plt.grid(True)
 
 plt.xlabel("SNR [dB] For Different Optimizers")
 plt.ylabel("SER")
-plt.title("2x2 MIMO SER, 1k Symbols, BPSK, 16 Neurons, 2 Layers")
+plt.title(f"Nr {Nr} x Nt {Nt} MIMO SER, {K} Symbols, {M}-PSK, 16 Neurons, 2 Layers")
 plt.legend()
 
 plt.show()
